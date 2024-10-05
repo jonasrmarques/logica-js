@@ -34,3 +34,26 @@ function nomeReverso(str){
 }
 
 console.log(nomeReverso('adasir uod ue ,sohlif maçaf euq ,marrom euq mim roP .adan melav oãn sortuo so sodot ,etnasnep etnem a rolav uod óS'))
+
+/*
+    2. Encontrar o Segundo Maior Número
+    Dado um array de números, crie uma função que encontre o segundo maior número sem utilizar a função sort().
+ */
+
+
+function segundoMaiorNumero(arr){
+    let maiorNumero = -Infinity
+    let segundoNumero = -Infinity
+
+    for(let num of arr){
+        if(num > maiorNumero){
+            segundoMaiorNumero = maiorNumero
+            maiorNumero = num
+        } else if(num > segundoMaiorNumero && num !== maiorNumero){
+            segundoNumero = num
+        }
+    }
+    return segundoNumero
+}
+
+console.log(segundoMaiorNumero([10, 5, 8, 20, 15]))
