@@ -56,4 +56,4 @@ function segundoMaiorNumero(arr){
     return segundoNumero
 }
 
-console.log(segundoMaiorNumero([10, 5, 8, 20, 15]))
+console.log(segundoMaiorNumero([10, 5, 22, 21, 20]))
