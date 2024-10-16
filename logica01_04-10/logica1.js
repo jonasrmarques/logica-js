@@ -42,18 +42,38 @@ console.log(nomeReverso('adasir uod ue ,sohlif maçaf euq ,marrom euq mim roP .a
 
 
 function segundoMaiorNumero(arr){
-    let maiorNumero = -Infinity
-    let segundoNumero = -Infinity
+    let maiorNumero = null
+    let segundoNumero = null
 
     for(let num of arr){
         if(num > maiorNumero){
-            segundoMaiorNumero = maiorNumero
+            segundoNumero = maiorNumero
             maiorNumero = num
-        } else if(num > segundoMaiorNumero && num !== maiorNumero){
+        } else if(num > segundoNumero && num !== maiorNumero){
             segundoNumero = num
         }
     }
     return segundoNumero
 }
 
-console.log(segundoMaiorNumero([10, 5, 22, 21, 20]))
+console.log(segundoMaiorNumero([10, 11, 12, 13, 14, 15]))
+
+
+
+
+
+
+function segundoMaiorNome(nomePequeno, nomeGrande){
+    let nome1 = nomePequeno
+    let nome2 = nomeGrande
+    for(let nome of nomePequeno )
+        if(nome > nomePequeno.length){
+            nome2 = nome1
+            nome1 = nome
+        } else if(nome > nome2 && nome2 !== nome1){
+            nome2 = nome
+        }
+        return nome2
+}
+
+console.log(segundoMaiorNome(['Jonas', 'Rafael', 'Ana']))
